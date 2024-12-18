@@ -16,18 +16,18 @@ body.appendChild(button);
 body.appendChild(paragraph);
 body.appendChild(button1);
 
-function test(event) {
+function addtext(event) {
     paragraph.textContent = "Hello, world!";
     console.log(`Vous avez cliqué sur le bouton ${event.target.id}`);
 }
-function test1(event) {
+function addelement(event) {
     const listli = document.createElement("li");
     listli.innerText = "Nouvel élément";
     listul.appendChild(listli);
     console.log(`Vous avez cliqué sur le bouton ${event.target.id}`);
 }
 
-button.addEventListener("click", test);
+button.addEventListener("click", addtext);
 button1.addEventListener("click", () => {
     paragraph.style.backgroundColor = "red";
 });
@@ -39,7 +39,7 @@ body.appendChild(button3);
 const listul = document.createElement("ul");
 body.appendChild(listul);
 
-button3.addEventListener("click", test1);
+button3.addEventListener("click", addelement);
 
 // function gestionnaireClic(event) {
 //     console.log(`Vous avez cliqué sur le bouton ${event.target.id}`);
